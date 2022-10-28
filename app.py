@@ -3,7 +3,6 @@ from flask import Flask,jsonify,request , render_template
 import pickle 
 import pandas as pd
 import numpy as np
-from sqlalchemy import null
 
 
 def prepare_data(data,datapoint,Prediction=False):
