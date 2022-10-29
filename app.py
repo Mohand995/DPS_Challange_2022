@@ -67,6 +67,19 @@ def predict():
 
     return  render_template("home.html",prediction_text="the number of accidents is {}".format(result['prediction']))
 
+
+@app.route("/predict_2",methods=['POST'])
+def predict_2():
+    data=request.json
+    
+    preds=predict_pipe(data)
+    return preds 
+
+
+
+
+
+
 if __name__=='__main__':
     app.run(debug=True)
 
